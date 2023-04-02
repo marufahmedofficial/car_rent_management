@@ -1,4 +1,4 @@
-# dhaka_rides
+# car_rent_management
 
 A new Flutter project.
 
