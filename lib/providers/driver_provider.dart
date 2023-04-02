@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:dhaka_rides/db/db_helper.dart';
-import 'package:dhaka_rides/models/driver_model.dart';
 
+import '../db/db_helper.dart';
+import '../models/driver_model.dart';
 class DriverProvider extends ChangeNotifier {
   List<DriverModel> driverList = [];
   int? totalDriver;

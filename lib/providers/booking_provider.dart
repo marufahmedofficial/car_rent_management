@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:dhaka_rides/db/db_helper.dart';
-import 'package:dhaka_rides/models/booking_model.dart';
 
+import '../db/db_helper.dart';
+import '../models/booking_model.dart';
 class BookingProvider extends ChangeNotifier {
   List<BookingModel> bookingList = [];
   int? totalBooking;

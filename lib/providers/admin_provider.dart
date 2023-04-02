@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:dhaka_rides/db/db_helper.dart';
-import 'package:dhaka_rides/models/admin_model.dart';
+import '../db/db_helper.dart';
+import '../models/admin_model.dart';
 
 class AdminProvider extends ChangeNotifier {
   late AdminModel adminModel;

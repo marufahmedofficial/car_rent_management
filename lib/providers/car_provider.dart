@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:dhaka_rides/db/db_helper.dart';
-import 'package:dhaka_rides/models/car_model.dart';
-import 'package:dhaka_rides/models/fare_model.dart';
+
+import '../db/db_helper.dart';
+import '../models/car_model.dart';
+import '../models/fare_model.dart';
 
 class CarProvider extends ChangeNotifier {
   List<CarModel> carList = [];
