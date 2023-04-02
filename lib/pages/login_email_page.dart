@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:dhaka_rides/pages/signin_option_page.dart';
-import 'package:dhaka_rides/pages/user_dashboard_page.dart';
-import 'package:dhaka_rides/providers/user_provider.dart';
-import 'package:dhaka_rides/utils/helper_functions.dart';
+
+import '../providers/user_provider.dart';
+import '../utils/helper_functions.dart';
+import 'signin_option_page.dart';
+import 'user_dashboard_page.dart';
 
 class LoginEmailPage extends StatefulWidget {
   static const String routeName = '/loginEmail';
