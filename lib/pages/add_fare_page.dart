@@ -1,16 +1,14 @@
+import 'package:car_rent_management/pages/signin_option_page.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:dhaka_rides/models/admin_model.dart';
-import 'package:dhaka_rides/models/fare_model.dart';
-import 'package:dhaka_rides/pages/add_car_page.dart';
-import 'package:dhaka_rides/pages/add_driver_page.dart';
-import 'package:dhaka_rides/pages/admin_dashboard_page.dart';
-import 'package:dhaka_rides/pages/car_details_page.dart';
-import 'package:dhaka_rides/pages/signin_option_page.dart';
-import 'package:dhaka_rides/providers/admin_provider.dart';
-import 'package:dhaka_rides/providers/car_provider.dart';
-import 'package:dhaka_rides/utils/helper_functions.dart';
-import 'package:dhaka_rides/utils/utils.dart';
+
+import '../models/admin_model.dart';
+import '../models/fare_model.dart';
+import '../providers/admin_provider.dart';
+import '../providers/car_provider.dart';
+import '../utils/helper_functions.dart';
+import '../utils/utils.dart';
+import 'car_details_page.dart';
 
 class AddFarePage extends StatefulWidget {
   static const String routeName = '/addFare';

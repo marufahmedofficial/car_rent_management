@@ -1,11 +1,13 @@
-import 'package:dhaka_rides/models/admin_model.dart';
-import 'package:dhaka_rides/models/booking_model.dart';
-import 'package:dhaka_rides/models/car_model.dart';
-import 'package:dhaka_rides/models/driver_model.dart';
-import 'package:dhaka_rides/models/fare_model.dart';
-import 'package:dhaka_rides/models/user_model.dart';
+
 import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart' as Path;
+
+import '../models/admin_model.dart';
+import '../models/booking_model.dart';
+import '../models/car_model.dart';
+import '../models/driver_model.dart';
+import '../models/fare_model.dart';
+import '../models/user_model.dart';
 
 class DbHelper {
   static const String createTableAdmin = '''create table $tblAdmin(
