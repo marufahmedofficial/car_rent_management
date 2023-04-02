@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:dhaka_rides/utils/utils.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
+import 'utils.dart';
 
 String getFormattedDate(DateTime dateTime, String pattern) {
   return DateFormat(pattern).format(dateTime);

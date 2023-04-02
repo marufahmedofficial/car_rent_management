@@ -1,9 +1,10 @@
+import 'package:car_rent_management/pages/signin_option_page.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:dhaka_rides/pages/admin_dashboard_page.dart';
-import 'package:dhaka_rides/pages/signin_option_page.dart';
-import 'package:dhaka_rides/providers/admin_provider.dart';
-import 'package:dhaka_rides/utils/helper_functions.dart';
+
+import '../providers/admin_provider.dart';
+import '../utils/helper_functions.dart';
+import 'admin_dashboard_page.dart';
 
 class AdminLoginPage extends StatefulWidget {
   static const String routeName = '/adminLogin';

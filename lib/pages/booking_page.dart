@@ -2,18 +2,17 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:dhaka_rides/models/booking_model.dart';
-import 'package:dhaka_rides/models/car_model.dart';
-import 'package:dhaka_rides/models/driver_model.dart';
-import 'package:dhaka_rides/models/user_model.dart';
-import 'package:dhaka_rides/pages/order_details_page.dart';
-import 'package:dhaka_rides/pages/user_dashboard_page.dart';
-import 'package:dhaka_rides/providers/booking_provider.dart';
-import 'package:dhaka_rides/providers/car_provider.dart';
-import 'package:dhaka_rides/providers/driver_provider.dart';
-import 'package:dhaka_rides/providers/user_provider.dart';
-import 'package:dhaka_rides/utils/helper_functions.dart';
-import 'package:dhaka_rides/utils/utils.dart';
+
+import '../models/booking_model.dart';
+import '../models/car_model.dart';
+import '../models/user_model.dart';
+import '../providers/booking_provider.dart';
+import '../providers/car_provider.dart';
+import '../providers/driver_provider.dart';
+import '../providers/user_provider.dart';
+import '../utils/helper_functions.dart';
+import '../utils/utils.dart';
+import 'order_details_page.dart';
 
 class BookingPage extends StatefulWidget {
   static const String routeName = '/userBooking';
@@ -79,9 +78,9 @@ class _BookingPageState extends State<BookingPage> {
                     padding: const EdgeInsets.all(8.0),
                     child: Center(
                         child: Text(
-                      'Car Information',
-                      style: TextStyle(fontWeight: FontWeight.bold),
-                    )),
+                          'Car Information',
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        )),
                   ),
                   Image.file(
                     File(car.image),
@@ -186,7 +185,7 @@ class _BookingPageState extends State<BookingPage> {
                           border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(6),
                               borderSide:
-                                  BorderSide(color: Colors.blue, width: 1))),
+                              BorderSide(color: Colors.blue, width: 1))),
                       validator: (value) {
                         if (value == null || value.isEmpty) {
                           return 'Please enter pickup address';
@@ -218,11 +217,11 @@ class _BookingPageState extends State<BookingPage> {
                             border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(6),
                                 borderSide:
-                                    BorderSide(color: Colors.blue, width: 1))),
+                                BorderSide(color: Colors.blue, width: 1))),
                         hint: Text('Select Time',style: TextStyle(color: Colors.green),),
                         items: bookingTime
                             .map((e) =>
-                                DropdownMenuItem(value: e, child: Text(e!)))
+                            DropdownMenuItem(value: e, child: Text(e!)))
                             .toList(),
                         value: selectedTime,
                         validator: (value) {
@@ -241,7 +240,7 @@ class _BookingPageState extends State<BookingPage> {
                     padding: const EdgeInsets.all(8.0),
                     child: ElevatedButton(
                       style:
-                          ElevatedButton.styleFrom(primary: Colors.green),
+                      ElevatedButton.styleFrom(primary: Colors.green),
                       onPressed: saveOrder,
                       child: Text(id == null ? 'Place Order' : 'Update Order'),
                     ),
