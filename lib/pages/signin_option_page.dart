@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'admin_login_page.dart';
@@ -39,18 +40,18 @@ class _SigninOptionPageState extends State<SigninOptionPage> {
                 height: 200,
               ),
               const Text('''Hire reliable service experts for
-               your home & office''',
+               your home & office.''',
                   style: TextStyle(
                     color: Color(0xff4c505b),
                     fontSize: 18,
                   )),
-              SizedBox(
+              const SizedBox(
                 height: 70,
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: SizedBox(
-                  width: 400,
+                  width: 300,
                   height: 50,
                   child: ElevatedButton.icon(
                       style: ButtonStyle(
@@ -61,11 +62,11 @@ class _SigninOptionPageState extends State<SigninOptionPage> {
                         Navigator.pushReplacementNamed(
                             context, LoginPhonePage.routeName);
                       },
-                      icon: Icon(Icons.phone),
-                      label: Text('Continue with Phone')),
+                      icon: const Icon(CupertinoIcons.phone),
+                      label: const Text('Continue with Phone')),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               const Text('or Connect with',
