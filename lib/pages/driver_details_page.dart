@@ -2,16 +2,12 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:dhaka_rides/models/admin_model.dart';
-import 'package:dhaka_rides/models/driver_model.dart';
-import 'package:dhaka_rides/pages/add_car_page.dart';
-import 'package:dhaka_rides/pages/add_driver_page.dart';
-import 'package:dhaka_rides/pages/admin_dashboard_page.dart';
-import 'package:dhaka_rides/pages/signin_option_page.dart';
-import 'package:dhaka_rides/providers/admin_provider.dart';
-import 'package:dhaka_rides/providers/driver_provider.dart';
-import 'package:dhaka_rides/providers/user_provider.dart';
-import 'package:dhaka_rides/utils/helper_functions.dart';
+
+import '../models/admin_model.dart';
+import '../models/driver_model.dart';
+import '../providers/admin_provider.dart';
+import '../providers/driver_provider.dart';
+import '../providers/user_provider.dart';
 
 class DriverDetailsPage extends StatefulWidget {
   static const String routeName = '/driverDetails';
