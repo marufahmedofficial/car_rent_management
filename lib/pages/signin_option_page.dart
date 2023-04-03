@@ -74,13 +74,13 @@ class _SigninOptionPageState extends State<SigninOptionPage> {
                     color: Color(0xff4c505b),
                     fontSize: 18,
                   )),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: SizedBox(
-                  width: 400,
+                  width: 300,
                   height: 50,
                   child: ElevatedButton.icon(
                       style: ButtonStyle(
@@ -91,8 +91,8 @@ class _SigninOptionPageState extends State<SigninOptionPage> {
                         Navigator.pushReplacementNamed(
                             context, LoginEmailPage.routeName);
                       },
-                      icon: Icon(Icons.email),
-                      label: Text('Continue with Email')),
+                      icon: const Icon(CupertinoIcons.mail),
+                      label: const Text('Continue with Email')),
                 ),
               ),
               const SizedBox(
