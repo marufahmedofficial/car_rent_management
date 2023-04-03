@@ -3,10 +3,9 @@ import 'package:flutter_email_sender/flutter_email_sender.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 import 'package:mailer/mailer.dart';
 import 'package:mailer/smtp_server/gmail.dart';
-import 'package:dhaka_rides/pages/email_send.dart';
-import 'package:dhaka_rides/pages/login_email_page.dart';
-import 'package:dhaka_rides/pages/login_phone_page.dart';
-import 'package:dhaka_rides/pages/signin_option_page.dart';
+
+import 'email_send.dart';
+import 'login_phone_page.dart';
 
 class OtpVerificationPage extends StatefulWidget {
   static const String routeName = '/otpVerification';

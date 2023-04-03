@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:dhaka_rides/pages/admin_login_page.dart';
-import 'package:dhaka_rides/pages/login_email_page.dart';
-import 'package:dhaka_rides/pages/login_phone_page.dart';
+
+import 'admin_login_page.dart';
+import 'login_email_page.dart';
+import 'login_phone_page.dart';
 
 class SigninOptionPage extends StatefulWidget {
   static const String routeName = '/signinOption';
@@ -93,7 +94,7 @@ class _SigninOptionPageState extends State<SigninOptionPage> {
                       label: Text('Continue with Email')),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Padding(
