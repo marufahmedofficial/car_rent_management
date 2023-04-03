@@ -17,7 +17,7 @@ class _SigninOptionPageState extends State<SigninOptionPage> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         image: DecorationImage(
             image: AssetImage('images/signin_option.png'), fit: BoxFit.cover),
       ),
@@ -29,13 +29,13 @@ class _SigninOptionPageState extends State<SigninOptionPage> {
             children: [
               Container(),
               Container(
-                padding: EdgeInsets.only(left: 35, top: 130),
-                child: Text(
+                padding: const EdgeInsets.only(left: 35, top: 110),
+                child: const Text(
                   'Car Renting ',
                   style: TextStyle(color: Colors.white, fontSize: 33),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 200,
               ),
               const Text('''Hire reliable service experts for
