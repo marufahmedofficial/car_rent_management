@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:dhaka_rides/pages/signin_option_page.dart';
-import 'package:dhaka_rides/utils/helper_functions.dart';
+
+import 'signin_option_page.dart';
 
 class LauncherPage extends StatefulWidget {
   static const String routeName = '/';

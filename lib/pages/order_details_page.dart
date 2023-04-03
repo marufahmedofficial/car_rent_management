@@ -2,13 +2,13 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:dhaka_rides/models/booking_model.dart';
-import 'package:dhaka_rides/models/user_model.dart';
-import 'package:dhaka_rides/pages/user_dashboard_page.dart';
-import 'package:dhaka_rides/providers/booking_provider.dart';
-import 'package:dhaka_rides/providers/car_provider.dart';
-import 'package:dhaka_rides/providers/driver_provider.dart';
-import 'package:dhaka_rides/providers/user_provider.dart';
+
+import '../models/user_model.dart';
+import '../providers/booking_provider.dart';
+import '../providers/car_provider.dart';
+import '../providers/driver_provider.dart';
+import '../providers/user_provider.dart';
+import 'user_dashboard_page.dart';
 
 class OrderDetailsPage extends StatefulWidget {
   static const String routeName = '/orderDetails';

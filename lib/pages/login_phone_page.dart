@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:dhaka_rides/pages/admin_dashboard_page.dart';
-import 'package:dhaka_rides/pages/launcher_page.dart';
-import 'package:dhaka_rides/pages/login_email_page.dart';
-import 'package:dhaka_rides/pages/otp_verification_page.dart';
-import 'package:dhaka_rides/pages/signin_option_page.dart';
-import 'package:dhaka_rides/pages/user_dashboard_page.dart';
-import 'package:dhaka_rides/providers/user_provider.dart';
-import 'package:dhaka_rides/utils/helper_functions.dart';
+
+import '../providers/user_provider.dart';
+import '../utils/helper_functions.dart';
+import 'signin_option_page.dart';
+import 'user_dashboard_page.dart';
 
 class LoginPhonePage extends StatefulWidget {
   static const String routeName = '/loginPhone';
