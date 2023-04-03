@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
 import 'pages/add_car_page.dart';
 import 'pages/add_driver_page.dart';
 import 'pages/add_fare_page.dart';
