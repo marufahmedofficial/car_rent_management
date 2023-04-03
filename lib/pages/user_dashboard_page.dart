@@ -2,17 +2,16 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:dhaka_rides/models/car_model.dart';
-import 'package:dhaka_rides/models/user_model.dart';
-import 'package:dhaka_rides/pages/booking_page.dart';
-import 'package:dhaka_rides/pages/login_email_page.dart';
-import 'package:dhaka_rides/pages/login_phone_page.dart';
-import 'package:dhaka_rides/pages/signin_option_page.dart';
-import 'package:dhaka_rides/providers/booking_provider.dart';
-import 'package:dhaka_rides/providers/car_provider.dart';
-import 'package:dhaka_rides/providers/driver_provider.dart';
-import 'package:dhaka_rides/providers/user_provider.dart';
-import 'package:dhaka_rides/utils/helper_functions.dart';
+
+import '../models/car_model.dart';
+import '../models/user_model.dart';
+import '../providers/booking_provider.dart';
+import '../providers/car_provider.dart';
+import '../providers/driver_provider.dart';
+import '../providers/user_provider.dart';
+import '../utils/helper_functions.dart';
+import 'booking_page.dart';
+import 'signin_option_page.dart';
 
 class UserDashboardPage extends StatefulWidget {
   static const String routeName = '/userDashboard';
