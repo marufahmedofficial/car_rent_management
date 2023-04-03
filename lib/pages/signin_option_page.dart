@@ -31,7 +31,7 @@ class _SigninOptionPageState extends State<SigninOptionPage> {
               Container(
                 padding: EdgeInsets.only(left: 35, top: 130),
                 child: Text(
-                  'Dhaka Rides',
+                  'Car Renting ',
                   style: TextStyle(color: Colors.white, fontSize: 33),
                 ),
               ),
