@@ -111,11 +111,11 @@ class _SigninOptionPageState extends State<SigninOptionPage> {
                         Navigator.pushReplacementNamed(
                             context, AdminLoginPage.routeName);
                       },
-                      icon: Icon(Icons.supervised_user_circle),
-                      label: Text('Admin Login')),
+                      icon: const Icon(CupertinoIcons.person_2_fill),
+                      label: const Text('Admin Login')),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Padding(
@@ -146,9 +146,9 @@ class _SigninOptionPageState extends State<SigninOptionPage> {
                                           Theme.of(context).textTheme.bodySmall,
                                     ),
                                     onPressed: () {},
-                                    child: Text('Terms and Services'),
+                                    child: const Text('Terms and Services'),
                                   )),
-                              TextSpan(text: ' and '),
+                              const TextSpan(text: ' and '),
                               WidgetSpan(
                                   alignment: PlaceholderAlignment.baseline,
                                   baseline: TextBaseline.alphabetic,
@@ -166,7 +166,7 @@ class _SigninOptionPageState extends State<SigninOptionPage> {
                                           Theme.of(context).textTheme.bodySmall,
                                     ),
                                     onPressed: () {},
-                                    child: Text('Privacy Policy'),
+                                    child: const Text('Privacy Policy'),
                                   )),
                             ]),
                       ),
