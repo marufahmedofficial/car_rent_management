@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'admin_login_page.dart';
@@ -17,7 +18,7 @@ class _SigninOptionPageState extends State<SigninOptionPage> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         image: DecorationImage(
             image: AssetImage('images/signin_option.png'), fit: BoxFit.cover),
       ),
@@ -29,28 +30,28 @@ class _SigninOptionPageState extends State<SigninOptionPage> {
             children: [
               Container(),
               Container(
-                padding: EdgeInsets.only(left: 35, top: 130),
-                child: Text(
+                padding: const EdgeInsets.only(left: 35, top: 110),
+                child: const Text(
                   'Car Renting ',
                   style: TextStyle(color: Colors.white, fontSize: 33),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 200,
               ),
               const Text('''Hire reliable service experts for
-               your home & office''',
+               your home & office.''',
                   style: TextStyle(
                     color: Color(0xff4c505b),
                     fontSize: 18,
                   )),
-              SizedBox(
+              const SizedBox(
                 height: 70,
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: SizedBox(
-                  width: 400,
+                  width: 300,
                   height: 50,
                   child: ElevatedButton.icon(
                       style: ButtonStyle(
@@ -61,11 +62,11 @@ class _SigninOptionPageState extends State<SigninOptionPage> {
                         Navigator.pushReplacementNamed(
                             context, LoginPhonePage.routeName);
                       },
-                      icon: Icon(Icons.phone),
-                      label: Text('Continue with Phone')),
+                      icon: const Icon(CupertinoIcons.phone),
+                      label: const Text('Continue with Phone')),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               const Text('or Connect with',
@@ -73,13 +74,13 @@ class _SigninOptionPageState extends State<SigninOptionPage> {
                     color: Color(0xff4c505b),
                     fontSize: 18,
                   )),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: SizedBox(
-                  width: 400,
+                  width: 300,
                   height: 50,
                   child: ElevatedButton.icon(
                       style: ButtonStyle(
@@ -90,8 +91,8 @@ class _SigninOptionPageState extends State<SigninOptionPage> {
                         Navigator.pushReplacementNamed(
                             context, LoginEmailPage.routeName);
                       },
-                      icon: Icon(Icons.email),
-                      label: Text('Continue with Email')),
+                      icon: const Icon(CupertinoIcons.mail),
+                      label: const Text('Continue with Email')),
                 ),
               ),
               const SizedBox(
@@ -110,11 +111,11 @@ class _SigninOptionPageState extends State<SigninOptionPage> {
                         Navigator.pushReplacementNamed(
                             context, AdminLoginPage.routeName);
                       },
-                      icon: Icon(Icons.supervised_user_circle),
-                      label: Text('Admin Login')),
+                      icon: const Icon(CupertinoIcons.person_2_fill),
+                      label: const Text('Admin Login')),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Padding(
@@ -145,9 +146,9 @@ class _SigninOptionPageState extends State<SigninOptionPage> {
                                           Theme.of(context).textTheme.bodySmall,
                                     ),
                                     onPressed: () {},
-                                    child: Text('Terms and Services'),
+                                    child: const Text('Terms and Services'),
                                   )),
-                              TextSpan(text: ' and '),
+                              const TextSpan(text: ' and '),
                               WidgetSpan(
                                   alignment: PlaceholderAlignment.baseline,
                                   baseline: TextBaseline.alphabetic,
@@ -165,7 +166,7 @@ class _SigninOptionPageState extends State<SigninOptionPage> {
                                           Theme.of(context).textTheme.bodySmall,
                                     ),
                                     onPressed: () {},
-                                    child: Text('Privacy Policy'),
+                                    child: const Text('Privacy Policy'),
                                   )),
                             ]),
                       ),
