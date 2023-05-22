@@ -46,6 +46,20 @@ dependencies:
   mailer: ^5.2.0
   google_sign_in: ^5.4.2
   flutter_launcher_icons: ^0.13.1
+  flutter_native_splash: ^2.2.19
+
+flutter_native_splash:
+  color: "#f7f6f1"
+  color_dark: "#272727"
+  image: images/car-rental.png
+  image_dark: images/car-rental.png
+
+  android_12:
+    image: images/car-rental.png
+    icon_background_color: "#f7f6f1"
+    image_dark: images/car-rental.png
+    icon_background_color_dark: "#272727"
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
