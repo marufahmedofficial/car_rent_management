@@ -47,6 +47,7 @@ dependencies:
   google_sign_in: ^5.4.2
   flutter_launcher_icons: ^0.13.1
   flutter_native_splash: ^2.2.19
+  google_fonts: ^4.0.4
 
 flutter_native_splash:
   color: "#f7f6f1"
