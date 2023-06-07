@@ -22,7 +22,7 @@ Widget buildBottomNavBar(int currIndex, Size size, ThemeData themeData) {
     onTap: (value) {
       if (value != currIndex) {
         if (value == 1) {
-          Get.off(const HomePage());
+          Get.off(const HomePageNew());
         }
       }
     },

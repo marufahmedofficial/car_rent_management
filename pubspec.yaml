@@ -48,6 +48,8 @@ dependencies:
   flutter_launcher_icons: ^0.13.1
   flutter_native_splash: ^2.2.19
   google_fonts: ^4.0.4
+  get: ^4.6.1
+  unicons: ^2.0.2
 
 flutter_native_splash:
   color: "#f7f6f1"
@@ -89,8 +91,7 @@ flutter_launcher_icons:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^2.0.0
-  get: ^4.6.1
-  unicons: ^2.0.2
+
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

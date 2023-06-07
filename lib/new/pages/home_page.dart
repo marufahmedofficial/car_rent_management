@@ -7,14 +7,14 @@ import '../widgets/bottom_nav_bar.dart';
 import '../widgets/homePage/most_rented.dart';
 import '../widgets/homePage/top_brands.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+class HomePageNew extends StatefulWidget {
+  const HomePageNew({Key? key}) : super(key: key);
 
   @override
-  _HomePageState createState() => _HomePageState();
+  _HomePageNewState createState() => _HomePageNewState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _HomePageNewState extends State<HomePageNew> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size; //check the size of device
