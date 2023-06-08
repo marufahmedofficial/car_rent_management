@@ -27,7 +27,7 @@ class _HomePageNewState extends State<HomePageNew> {
           bottomOpacity: 0.0,
           elevation: 0.0,
           shadowColor: Colors.transparent,
-          backgroundColor: themeData.backgroundColor,
+          backgroundColor: themeData.colorScheme.background,
           leading: Padding(
             padding: EdgeInsets.only(
               left: size.width * 0.05,
@@ -37,7 +37,7 @@ class _HomePageNewState extends State<HomePageNew> {
               width: size.width * 0.1,
               child: Container(
                 decoration: BoxDecoration(
-                  color: themeData.backgroundColor.withOpacity(0.03),
+                  color: themeData.colorScheme.background.withOpacity(0.03),
                   borderRadius: const BorderRadius.all(
                     Radius.circular(10),
                   ),
@@ -74,7 +74,7 @@ class _HomePageNewState extends State<HomePageNew> {
                 width: size.width * 0.1,
                 child: Container(
                   decoration: BoxDecoration(
-                    color: themeData.backgroundColor.withOpacity(0.03),
+                    color: themeData.colorScheme.background.withOpacity(0.03),
                     borderRadius: const BorderRadius.all(
                       Radius.circular(10),
                     ),
@@ -93,7 +93,7 @@ class _HomePageNewState extends State<HomePageNew> {
       extendBody: true,
       extendBodyBehindAppBar: true,
       bottomNavigationBar: buildBottomNavBar(1, size, themeData),
-      backgroundColor: themeData.backgroundColor,
+      backgroundColor: Colors.grey.shade300,
       body: SafeArea(
         child: ListView(
           children: [
@@ -121,7 +121,7 @@ class _HomePageNewState extends State<HomePageNew> {
                           'Enjoy Our features',
                           textAlign: TextAlign.center,
                           style: GoogleFonts.poppins(
-                            color: themeData.secondaryHeaderColor,
+                            color:  Colors.blue.shade900,
                             fontSize: size.width * 0.06,
                             fontWeight: FontWeight.bold,
                           ),
