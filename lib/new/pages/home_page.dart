@@ -8,6 +8,7 @@ import '../widgets/homePage/most_rented.dart';
 import '../widgets/homePage/top_brands.dart';
 
 class HomePageNew extends StatefulWidget {
+  static const String routeName = '/';
   const HomePageNew({Key? key}) : super(key: key);
 
   @override

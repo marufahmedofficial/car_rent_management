@@ -43,7 +43,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Car Renting Management',
+      title: 'Car Rent Management',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -66,6 +66,7 @@ class MyApp extends StatelessWidget {
         BookingPage.routeName: (context) => BookingPage(),
         OrderDetailsPage.routeName: (context) => OrderDetailsPage(),
         BookingListPage.routeName: (context) => BookingListPage(),
+        HomePageNew.routeName: (context) => HomePageNew(),
       },
     );
   }
