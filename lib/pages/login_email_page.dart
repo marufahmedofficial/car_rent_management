@@ -1,3 +1,4 @@
+import 'package:car_rent_management/new/pages/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -237,7 +238,7 @@ class _LoginEmailPageState extends State<LoginEmailPage> {
             await setUserId(user.userId!);
             if (mounted)
               Navigator.pushReplacementNamed(
-                  context, UserDashboardPage.routeName,
+                  context, HomePageNew.routeName,
                   arguments: [user]);
           } else {
             //password did not match

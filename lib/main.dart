@@ -1,3 +1,4 @@
+import 'package:car_rent_management/new/pages/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'pages/add_car_page.dart';
