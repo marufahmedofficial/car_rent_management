@@ -122,6 +122,7 @@ class _HomePageNewState extends State<HomePageNew> {
                           textAlign: TextAlign.center,
                           style: GoogleFonts.poppins(
                             color:  Colors.blue.shade900,
+                            
                             fontSize: size.width * 0.06,
                             fontWeight: FontWeight.bold,
                           ),
