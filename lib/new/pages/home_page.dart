@@ -12,6 +12,8 @@ import 'package:share_plus/share_plus.dart';
 import 'package:slide_digital_clock/slide_digital_clock.dart';
 import 'package:unicons/unicons.dart';
 
+import '../../profile/profile_main.dart';
+import '../../settings.dart';
 import '../widgets/bottom_nav_bar.dart';
 import '../widgets/homePage/most_rented.dart';
 import '../widgets/homePage/top_brands.dart';
@@ -406,7 +408,12 @@ class _HomePageNewState extends State<HomePageNew> {
             ),
             InkWell(
               onTap: () {
-
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => ProfileMain()
+                    )
+                );
               },
               child: Padding(
                 padding: const EdgeInsets.only(left: 10.0, right: 10),
@@ -427,7 +434,12 @@ class _HomePageNewState extends State<HomePageNew> {
             ),
             InkWell(
               onTap: () {
-
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => Settings()
+                    )
+                );
               },
               child: Padding(
                 padding: const EdgeInsets.only(left: 10.0, right: 10),
@@ -436,7 +448,7 @@ class _HomePageNewState extends State<HomePageNew> {
                   children: const [
                     Icon(
                       CupertinoIcons.settings_solid,
-                      color: Colors.purple,
+                      color: Colors.deepPurple,
                     ),
                     Text(
                       "Setting",
