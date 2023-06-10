@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'package:google_fonts/google_fonts.dart';
@@ -21,75 +22,344 @@ class _HomePageNewState extends State<HomePageNew> {
     Size size = MediaQuery.of(context).size; //check the size of device
     ThemeData themeData = Theme.of(context);
     return Scaffold(
-      appBar: PreferredSize(
-        preferredSize: const Size.fromHeight(40.0), //appbar size
-        child: AppBar(
-          bottomOpacity: 0.0,
-          elevation: 4.0,
-          shadowColor: Colors.purple,
-          backgroundColor: Colors.blue.shade700,
-          leading: Padding(
-            padding: EdgeInsets.only(
-              left: size.width * 0.05,
-            ),
-            child: SizedBox(
-              height: size.width * 0.1,
-              width: size.width * 0.1,
-              child: Container(
-                decoration: BoxDecoration(
-                  color: themeData.colorScheme.background.withOpacity(0.03),
-                  borderRadius: const BorderRadius.all(
-                    Radius.circular(10),
-                  ),
-                ),
-                child: Icon(
-                  UniconsLine.bars,
-                  color: themeData.secondaryHeaderColor,
-                  size: size.height * 0.025,
-                ),
+      appBar: AppBar(
+        leading: Builder(
+          builder: (BuildContext context) {
+            return IconButton(
+              icon: const Icon(
+                CupertinoIcons.arrow_right_arrow_left_circle_fill,
+                color: Colors.white70,
+                size: 30, // Change Custom Drawer Icon Color
               ),
+              onPressed: () {
+                Scaffold.of(context).openDrawer();
+              },
+              tooltip: MaterialLocalizations
+                  .of(context)
+                  .openAppDrawerTooltip,
+            );
+          },
+        ),
+        elevation: 4,
+        shadowColor: Colors.blueAccent,
+        flexibleSpace: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: [Colors.blueAccent.shade400, Colors.purple.shade700],
+              begin: Alignment.bottomRight,
+              end: Alignment.topLeft,
             ),
+            borderRadius: const BorderRadius.only(
+              // bottomLeft: Radius.circular(60),
+                bottomRight: Radius.circular(60)),
           ),
-          automaticallyImplyLeading: false,
-          titleSpacing: 0,
-          leadingWidth: size.width * 0.15,
-          title: Text('Car Rent',style: TextStyle(
-            fontSize: 23,color: Colors.blue.shade200,fontWeight: FontWeight.bold
-          ),),
-          // Image.asset(
-          //   themeData.brightness == Brightness.dark
-          //       ? 'assets/icons/SobGOGlight.png'
-          //       : 'assets/icons/SobGOGdark.png', //logo
-          //   height: size.height * 0.06,
-          //   width: size.width * 0.35,
-          // ),
-          centerTitle: true,
-          actions: <Widget>[
-            Padding(
-              padding: EdgeInsets.only(
-                right: size.width * 0.05,
-              ),
-              child: SizedBox(
-                height: size.width * 0.1,
-                width: size.width * 0.1,
-                child: Container(
-                  decoration: BoxDecoration(
-                    color: themeData.colorScheme.background.withOpacity(0.03),
-                    borderRadius: const BorderRadius.all(
-                      Radius.circular(10),
-                    ),
-                  ),
-                  child: Icon(
-                    UniconsLine.search,
-                    color: themeData.secondaryHeaderColor,
-                    size: size.height * 0.025,
-                  ),
-                ),
-              ),
-            ),
-          ],
+        ),
+        title: const Text('Car Rent'),
+        centerTitle: true,
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(
+            // bottomLeft: Radius.circular(60),
+              bottomRight: Radius.circular((60))),
         ),
       ),
+      drawer: (Container(
+        height: MediaQuery
+            .of(context)
+            .size
+            .height * 0.94,
+        // width: MediaQuery.of(context).size.width,
+
+        clipBehavior: Clip.antiAliasWithSaveLayer,
+        padding: const EdgeInsets.only(left: 16.0, right: 40),
+        decoration: BoxDecoration(
+          color: Colors.white,
+          border: Border.all(
+            color: Colors.grey.shade200,
+            width: 1,
+          ),
+          boxShadow: const [
+            BoxShadow(
+              color: Colors.grey,
+              offset: Offset(0.0, 1.0), //(x,y)
+              blurRadius: 6.0,
+            ),
+          ],
+          borderRadius: const BorderRadius.only(
+            topRight: Radius.elliptical(170.0, 400.0),
+            bottomRight: Radius.elliptical(190.0, 400.0),
+          ),
+        ),
+        width: 280,
+
+        child: SafeArea(
+          child: SingleChildScrollView(
+            child: Column(
+              children: <Widget>[
+                const SizedBox(height: 15.0),
+                Padding(
+                  padding: const EdgeInsets.only(right: 55),
+                  child: DigitalClock(
+                    digitAnimationStyle: Curves.linear,
+                    is24HourTimeFormat: false,
+                    areaDecoration: const BoxDecoration(
+                      color: Colors.transparent,
+                    ),
+                    hourMinuteDigitTextStyle: const TextStyle(
+                      color: Colors.blueGrey,
+                      fontSize: 27,
+                    ),
+                    amPmDigitTextStyle: const TextStyle(
+                        color: Colors.blueGrey, fontWeight: FontWeight.bold),
+                  ),
+                ),
+                // const Icon(
+                //   CupertinoIcons.clock,
+                //   color: Colors.grey,
+                // ),
+                const SizedBox(height: 15.0),
+                Container(
+                  height: 90,
+                  width: 90,
+                  alignment: Alignment.center,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    border: Border.all(width: 2, color: Colors.deepOrange),
+                    image: const DecorationImage(
+                        image: AssetImage('assets/images/doctor.png'),
+                        fit: BoxFit.cover),
+                  ),
+                ),
+                const SizedBox(height: 13.0),
+                const Text(
+                  "Maruf Ahmed",
+                  style: TextStyle(
+                      color: Colors.black45,
+                      fontSize: 18.0,
+                      fontWeight: FontWeight.w600),
+                ),
+                const Text('Meditech ',
+                    style: TextStyle(color: Colors.blue, fontSize: 15.0)),
+                const SizedBox(height: 27),
+                InkWell(
+                  onTap: (){Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => ProfileMain()));},
+                  child: Row(
+                    children: const [
+                      Icon(
+                        CupertinoIcons.profile_circled,
+                        color: Colors.red,
+                        size: 40,
+                      ),
+                      SizedBox(width: 50),
+                      Text('Profile',
+                          style: TextStyle(
+                              fontWeight: FontWeight.w500, fontSize: 17))
+                    ],
+                  ),
+                ),
+                const Divider(),
+                const SizedBox(
+                  height: 15,
+                ),
+                InkWell(
+                  onTap: () {
+                    showDialog(
+                        context: context,
+                        builder: (BuildContext context) =>
+                            Theme(
+                              data: ThemeData.light(),
+                              child: CupertinoAlertDialog(
+                                title: Text(
+                                  'Rating',
+                                  style: boldTextStyle(size: 18),
+                                ).paddingOnly(bottom: 9),
+                                content: Column(
+                                  children: [
+                                    RatingBar.builder(
+                                      initialRating: 5,
+                                      minRating: 1,
+                                      itemSize: 35,
+                                      direction: Axis.horizontal,
+                                      itemPadding:
+                                      EdgeInsets.symmetric(horizontal: 2.0),
+                                      itemBuilder: (context, _) =>
+                                          Icon(
+                                            Icons.star,
+                                            color: Colors.amber,
+                                          ),
+                                      onRatingUpdate: (rating) {},
+                                    ),
+                                  ],
+                                ),
+                                actions: [
+                                  CupertinoDialogAction(
+                                    child: Text(
+                                      "Cancel",
+                                    ),
+                                    onPressed: () {
+                                      finish(context);
+                                    },
+                                  ),
+                                  CupertinoDialogAction(
+                                    child: Text('Submit'),
+                                    onPressed: () {
+                                      toasty(context, 'Submitted!',
+                                          gravity: ToastGravity.BOTTOM_LEFT);
+                                      finish(context);
+                                    },
+                                  )
+                                ],
+                              ),
+                            ));
+                  },
+                  child: Row(
+                    children: const [
+                      Icon(
+                        CupertinoIcons.star,
+                        color: Colors.red,
+                        size: 40,
+                      ),
+                      SizedBox(width: 50),
+                      Text('Rate Us',
+                          style: TextStyle(
+                              fontWeight: FontWeight.w500, fontSize: 17)),
+                    ],
+                  ),
+                ),
+                const Divider(),
+                const SizedBox(
+                  height: 15,
+                ),
+                InkWell(
+                  onTap: () {
+                    Share.share(
+                        'https://github.com/marufahmedofficial/MediTech_project_UITS');
+                  },
+                  child: Row(
+                    children: const [
+                      Icon(
+                        CupertinoIcons.share,
+                        color: Colors.red,
+                        size: 40,
+                      ),
+                      SizedBox(width: 50),
+                      Text('Share',
+                          style: TextStyle(
+                              fontWeight: FontWeight.w500, fontSize: 17)),
+                    ],
+                  ),
+                ),
+                const Divider(),
+                const SizedBox(
+                  height: 15,
+                ),
+                Row(
+                  children:[
+                    Icon(
+                      CupertinoIcons.info_circle,
+                      color: Colors.red,
+                      size: 40,
+                    ),
+                    SizedBox(width: 50),
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => AboutPage()));
+                      },
+                      child: Text('About',
+                          style: TextStyle(
+                              fontWeight: FontWeight.w500, fontSize: 17)),
+                    ),
+                  ],
+                ),
+                const Divider(),
+                const SizedBox(
+                  height: 15,
+                ),
+                InkWell(
+                  onTap: () {
+                    showCupertinoDialog(
+                        context: context,
+                        builder: (context) {
+                          return CupertinoAlertDialog(
+                            title: Text('Exit?',
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold, fontSize: 18)),
+                            content: Text('Do you really want to Exit?',
+                                style: TextStyle(fontSize: 18)),
+                            actions: [
+                              CupertinoDialogAction(
+                                child: Text('Cancel',
+                                    style: TextStyle(fontSize: 18,color: Colors.teal)),
+                                onPressed: () {
+                                  Navigator.pop(context); //close Dialog
+                                },
+                              ),
+                              CupertinoDialogAction(
+                                  child: Text('Yes',
+                                      style: TextStyle(
+                                          fontSize: 18,
+                                          color: Colors.red.shade700)),
+                                  onPressed: () {
+                                    if (Platform.isAndroid) {
+                                      SystemNavigator.pop();
+                                    } else if (Platform.isIOS) {
+                                      exit(0);
+                                    }
+                                  })
+                            ],
+                          );
+                        });
+
+                    // showDialog(
+                    //     context: context,
+                    //     builder: (context) {
+                    //       return AlertDialog(
+                    //         // title: Text(' Alert Dialog'),
+                    //         content: const Text('Do you really want to Exit?'),
+                    //         actions: <Widget>[
+                    //           TextButton(
+                    //               onPressed: () {
+                    //                 if (Platform.isAndroid) {
+                    //                   SystemNavigator.pop();
+                    //                 } else if (Platform.isIOS) {
+                    //                   exit(0);
+                    //                 }
+                    //               },
+                    //               child: const Text('Yes')),
+                    //           TextButton(
+                    //             onPressed: () {
+                    //               Navigator.pop(context); //close Dialog
+                    //             },
+                    //             child: const Text('No'),
+                    //           ),
+                    //         ],
+                    //       );
+                    //     });
+                  },
+                  child: Row(
+                    children: const [
+                      Icon(
+                        CupertinoIcons.arrow_right_circle,
+                        color: Colors.red,
+                        size: 38,
+                      ),
+                      SizedBox(width: 50),
+                      Text('Exit',
+                          style: TextStyle(
+                              fontWeight: FontWeight.w500, fontSize: 17)),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      )),
       extendBody: true,
       extendBodyBehindAppBar: true,
       bottomNavigationBar: buildBottomNavBar(1, size, themeData),
