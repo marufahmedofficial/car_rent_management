@@ -6,7 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:unicons/unicons.dart';
 
 class DetailsPageNew extends StatefulWidget {
-  static const String routeName = '/';
+
 
   final String carImage;
   final String carClass;
