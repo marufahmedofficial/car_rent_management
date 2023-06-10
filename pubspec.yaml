@@ -50,6 +50,10 @@ dependencies:
   google_fonts: ^4.0.4
   get: ^4.6.1
   unicons: ^2.0.2
+  slide_digital_clock: ^1.0.2
+  nb_utils: ^5.0.5
+  share_plus: ^6.3.1
+  url_launcher: ^6.1.11
 
 flutter_native_splash:
   color: "#f7f6f1"

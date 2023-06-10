@@ -1,7 +1,15 @@
+import 'dart:io';
+
+import 'package:car_rent_management/about.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
 import 'package:google_fonts/google_fonts.dart';
+import 'package:nb_utils/nb_utils.dart';
+import 'package:share_plus/share_plus.dart';
+import 'package:slide_digital_clock/slide_digital_clock.dart';
 import 'package:unicons/unicons.dart';
 
 import '../widgets/bottom_nav_bar.dart';
@@ -123,9 +131,9 @@ class _HomePageNewState extends State<HomePageNew> {
                   alignment: Alignment.center,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
-                    border: Border.all(width: 2, color: Colors.deepOrange),
+                    border: Border.all(width: 2, color: Colors.blue),
                     image: const DecorationImage(
-                        image: AssetImage('assets/images/doctor.png'),
+                        image: AssetImage('images/user.png'),
                         fit: BoxFit.cover),
                   ),
                 ),
@@ -137,19 +145,21 @@ class _HomePageNewState extends State<HomePageNew> {
                       fontSize: 18.0,
                       fontWeight: FontWeight.w600),
                 ),
-                const Text('Meditech ',
-                    style: TextStyle(color: Colors.blue, fontSize: 15.0)),
+                // const Text('Meditech ',
+                //     style: TextStyle(color: Colors.blue, fontSize: 15.0)),
                 const SizedBox(height: 27),
                 InkWell(
-                  onTap: (){Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => ProfileMain()));},
+                  onTap: (){
+                    // Navigator.push(
+                    //   context,
+                    //   MaterialPageRoute(
+                    //       builder: (context) => ProfileMain()));
+                    },
                   child: Row(
                     children: const [
                       Icon(
                         CupertinoIcons.profile_circled,
-                        color: Colors.red,
+                        color: Colors.blueAccent,
                         size: 40,
                       ),
                       SizedBox(width: 50),
@@ -187,7 +197,7 @@ class _HomePageNewState extends State<HomePageNew> {
                                       itemBuilder: (context, _) =>
                                           Icon(
                                             Icons.star,
-                                            color: Colors.amber,
+                                            color: Colors.blueAccent.shade700,
                                           ),
                                       onRatingUpdate: (rating) {},
                                     ),
@@ -196,14 +206,18 @@ class _HomePageNewState extends State<HomePageNew> {
                                 actions: [
                                   CupertinoDialogAction(
                                     child: Text(
-                                      "Cancel",
+                                      "Cancel",style: TextStyle(
+                                      color: Colors.red,fontWeight: FontWeight.bold
+                                    ),
                                     ),
                                     onPressed: () {
                                       finish(context);
                                     },
                                   ),
                                   CupertinoDialogAction(
-                                    child: Text('Submit'),
+                                    child: Text('Submit',style: TextStyle(
+                                        color: Colors.green.shade700,fontWeight: FontWeight.bold
+                                    ),),
                                     onPressed: () {
                                       toasty(context, 'Submitted!',
                                           gravity: ToastGravity.BOTTOM_LEFT);
@@ -218,7 +232,7 @@ class _HomePageNewState extends State<HomePageNew> {
                     children: const [
                       Icon(
                         CupertinoIcons.star,
-                        color: Colors.red,
+                        color: Colors.blueAccent,
                         size: 40,
                       ),
                       SizedBox(width: 50),
@@ -235,13 +249,13 @@ class _HomePageNewState extends State<HomePageNew> {
                 InkWell(
                   onTap: () {
                     Share.share(
-                        'https://github.com/marufahmedofficial/MediTech_project_UITS');
+                        'https://github.com/marufahmedofficial/car_rent_management');
                   },
                   child: Row(
                     children: const [
                       Icon(
                         CupertinoIcons.share,
-                        color: Colors.red,
+                        color: Colors.blueAccent,
                         size: 40,
                       ),
                       SizedBox(width: 50),
@@ -259,7 +273,7 @@ class _HomePageNewState extends State<HomePageNew> {
                   children:[
                     Icon(
                       CupertinoIcons.info_circle,
-                      color: Colors.red,
+                      color: Colors.blueAccent,
                       size: 40,
                     ),
                     SizedBox(width: 50),
@@ -268,7 +282,9 @@ class _HomePageNewState extends State<HomePageNew> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => AboutPage()));
+                                builder: (context) => AboutPage()
+                            )
+                        );
                       },
                       child: Text('About',
                           style: TextStyle(
@@ -315,37 +331,13 @@ class _HomePageNewState extends State<HomePageNew> {
                           );
                         });
 
-                    // showDialog(
-                    //     context: context,
-                    //     builder: (context) {
-                    //       return AlertDialog(
-                    //         // title: Text(' Alert Dialog'),
-                    //         content: const Text('Do you really want to Exit?'),
-                    //         actions: <Widget>[
-                    //           TextButton(
-                    //               onPressed: () {
-                    //                 if (Platform.isAndroid) {
-                    //                   SystemNavigator.pop();
-                    //                 } else if (Platform.isIOS) {
-                    //                   exit(0);
-                    //                 }
-                    //               },
-                    //               child: const Text('Yes')),
-                    //           TextButton(
-                    //             onPressed: () {
-                    //               Navigator.pop(context); //close Dialog
-                    //             },
-                    //             child: const Text('No'),
-                    //           ),
-                    //         ],
-                    //       );
-                    //     });
+
                   },
                   child: Row(
                     children: const [
                       Icon(
                         CupertinoIcons.arrow_right_circle,
-                        color: Colors.red,
+                        color: Colors.blueAccent,
                         size: 38,
                       ),
                       SizedBox(width: 50),
