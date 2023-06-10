@@ -25,9 +25,9 @@ class _HomePageNewState extends State<HomePageNew> {
         preferredSize: const Size.fromHeight(40.0), //appbar size
         child: AppBar(
           bottomOpacity: 0.0,
-          elevation: 0.0,
-          shadowColor: Colors.transparent,
-          backgroundColor: themeData.colorScheme.background,
+          elevation: 4.0,
+          shadowColor: Colors.purple,
+          backgroundColor: Colors.blue.shade700,
           leading: Padding(
             padding: EdgeInsets.only(
               left: size.width * 0.05,
@@ -54,7 +54,7 @@ class _HomePageNewState extends State<HomePageNew> {
           titleSpacing: 0,
           leadingWidth: size.width * 0.15,
           title: Text('Car Rent',style: TextStyle(
-            fontSize: 23,color: Colors.blue.shade900,fontWeight: FontWeight.bold
+            fontSize: 23,color: Colors.blue.shade200,fontWeight: FontWeight.bold
           ),),
           // Image.asset(
           //   themeData.brightness == Brightness.dark
@@ -93,7 +93,7 @@ class _HomePageNewState extends State<HomePageNew> {
       extendBody: true,
       extendBodyBehindAppBar: true,
       bottomNavigationBar: buildBottomNavBar(1, size, themeData),
-      backgroundColor: Colors.grey.shade300,
+      backgroundColor: Colors.grey.shade200,
       body: SafeArea(
         child: ListView(
           children: [
