@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:car_rent_management/about.dart';
+import 'package:car_rent_management/maps/gMapsHtml.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -152,10 +153,10 @@ class _HomePageNewState extends State<HomePageNew> {
                 const SizedBox(height: 27),
                 InkWell(
                   onTap: (){
-                    // Navigator.push(
-                    //   context,
-                    //   MaterialPageRoute(
-                    //       builder: (context) => ProfileMain()));
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => ProfileMain()));
                     },
                   child: Row(
                     children: const [
@@ -387,7 +388,12 @@ class _HomePageNewState extends State<HomePageNew> {
             ),
             InkWell(
               onTap: () {
-
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => YoutubeScreen()
+                    )
+                );
               },
               child: Padding(
                 padding: const EdgeInsets.only(left: 10.0, right: 10),

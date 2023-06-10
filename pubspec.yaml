@@ -58,6 +58,8 @@ dependencies:
   email_validator: ^2.0.1
   string_validator: ^0.3.0
   path_provider: ^2.0.4
+  webview_flutter: ^4.2.0
+
 flutter_native_splash:
   color: "#f7f6f1"
   color_dark: "#272727"

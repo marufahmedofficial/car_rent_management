@@ -9,7 +9,7 @@ class UserData {
 
   static User myUser = User(
     image:
-        "https://img.freepik.com/premium-vector/heart-medical-shape-doctor-logo-design_23987-717.jpg",
+        "https://img.freepik.com/premium-vector/avatar-profile-icon_188544-4755.jpg?w=1060",
     name: 'Your Name',
     email: 'maruf@gmail.com',
     phone: '+880........',
