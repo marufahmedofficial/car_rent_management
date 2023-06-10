@@ -31,7 +31,7 @@ Padding buildCar(int i, Size size, ThemeData themeData) {
             ),
             child: InkWell(
               onTap: () {
-                Get.to(DetailsPage(
+                Get.to(DetailsPageNew(
                   carImage: cars[i]['carImage'],
                   carClass: cars[i]['carClass'],
                   carName: cars[i]['carName'],

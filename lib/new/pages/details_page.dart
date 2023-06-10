@@ -5,7 +5,9 @@ import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:unicons/unicons.dart';
 
-class DetailsPage extends StatefulWidget {
+class DetailsPageNew extends StatefulWidget {
+  static const String routeName = '/';
+
   final String carImage;
   final String carClass;
   final String carName;
@@ -16,7 +18,7 @@ class DetailsPage extends StatefulWidget {
   final String carRating;
   final bool isRotated;
 
-  const DetailsPage({
+  const DetailsPageNew({
     Key? key,
     required this.carImage,
     required this.carClass,
@@ -30,10 +32,10 @@ class DetailsPage extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _DetailsPageState createState() => _DetailsPageState();
+  _DetailsPageNewState createState() => _DetailsPageNewState();
 }
 
-class _DetailsPageState extends State<DetailsPage> {
+class _DetailsPageNewState extends State<DetailsPageNew> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size; //check the size of device

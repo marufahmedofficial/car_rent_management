@@ -28,12 +28,12 @@ Widget buildBottomNavBar(int currIndex, Size size, ThemeData themeData) {
     },
     items: [
       buildBottomNavItem(
-        UniconsLine.bell,
+        UniconsLine.home,
         themeData,
         size,
       ),
       buildBottomNavItem(
-        UniconsLine.map_marker,
+        UniconsLine.location_point,
         themeData,
         size,
       ),
@@ -43,7 +43,7 @@ Widget buildBottomNavBar(int currIndex, Size size, ThemeData themeData) {
         size,
       ),
       buildBottomNavItem(
-        UniconsLine.apps,
+        UniconsLine.setting,
         themeData,
         size,
       ),
