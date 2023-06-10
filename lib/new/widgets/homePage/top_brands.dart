@@ -50,9 +50,11 @@ Column buildTopBrands(Size size, ThemeData themeData) {
                 width: size.width * 0.12,
                 fit: BoxFit.fill,
               ),
+
               size,
               themeData,
             ),
+            
           ],
         ),
       ),

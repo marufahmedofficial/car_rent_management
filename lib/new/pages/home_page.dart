@@ -122,7 +122,6 @@ class _HomePageNewState extends State<HomePageNew> {
                           textAlign: TextAlign.center,
                           style: GoogleFonts.poppins(
                             color:  Colors.blue.shade900,
-                            
                             fontSize: size.width * 0.06,
                             fontWeight: FontWeight.bold,
                           ),
@@ -138,7 +137,7 @@ class _HomePageNewState extends State<HomePageNew> {
                           'Enjoy the fun driving in Enterprise',
                           textAlign: TextAlign.center,
                           style: GoogleFonts.poppins(
-                            color: themeData.secondaryHeaderColor,
+                            color: Colors.blue.shade700,
                             fontSize: size.width * 0.035,
                           ),
                         ),
@@ -171,7 +170,7 @@ class _HomePageNewState extends State<HomePageNew> {
                                 focusedBorder: textFieldBorder(),
                                 border: textFieldBorder(),
                                 hintStyle: GoogleFonts.poppins(
-                                  color: themeData.primaryColor,
+                                    color:  Colors.blueGrey
                                 ),
                                 hintText: 'Search a car',
                               ),

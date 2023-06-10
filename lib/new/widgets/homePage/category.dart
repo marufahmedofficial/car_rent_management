@@ -14,7 +14,7 @@ Row buildCategory(String text, size, ThemeData themeData) {
           text,
           textAlign: TextAlign.center,
           style: GoogleFonts.poppins(
-            color: themeData.secondaryHeaderColor,
+            color:  Colors.blue.shade700,
             fontWeight: FontWeight.bold,
             fontSize: size.width * 0.055,
           ),
