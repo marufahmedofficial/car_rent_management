@@ -43,7 +43,8 @@ class YoutubeScreenState extends State<YoutubeScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.red,
+       title: Text('Location'),
+        centerTitle: true,
       ),
       body:  WebViewWidget(
         controller: controller,
