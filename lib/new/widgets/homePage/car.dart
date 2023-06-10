@@ -79,7 +79,7 @@ Padding buildCar(int i, Size size, ThemeData themeData) {
                       cars[i]['carClass'],
                       textAlign: TextAlign.center,
                       style: GoogleFonts.poppins(
-                        color: themeData.secondaryHeaderColor,
+                        color:  Colors.purple.shade700,
                         fontSize: size.width * 0.05,
                         fontWeight: FontWeight.bold,
                       ),
@@ -89,7 +89,7 @@ Padding buildCar(int i, Size size, ThemeData themeData) {
                     cars[i]['carName'],
                     textAlign: TextAlign.center,
                     style: GoogleFonts.poppins(
-                      color: themeData.secondaryHeaderColor,
+                      color:  Colors.indigo,
                       fontSize: size.width * 0.03,
                       fontWeight: FontWeight.bold,
                     ),
@@ -97,9 +97,9 @@ Padding buildCar(int i, Size size, ThemeData themeData) {
                   Row(
                     children: [
                       Text(
-                        '${cars[i]['carPrice']}\$',
+                        '${cars[i]['carPrice']}\৳',
                         style: GoogleFonts.poppins(
-                          color: themeData.secondaryHeaderColor,
+                          color:  Colors.red.shade700,
                           fontSize: size.width * 0.06,
                           fontWeight: FontWeight.bold,
                         ),

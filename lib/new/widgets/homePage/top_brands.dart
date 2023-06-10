@@ -54,7 +54,6 @@ Column buildTopBrands(Size size, ThemeData themeData) {
               size,
               themeData,
             ),
-            
           ],
         ),
       ),
