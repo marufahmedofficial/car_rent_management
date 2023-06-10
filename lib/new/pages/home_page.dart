@@ -354,7 +354,102 @@ class _HomePageNewState extends State<HomePageNew> {
       )),
       extendBody: true,
       extendBodyBehindAppBar: true,
-      bottomNavigationBar: buildBottomNavBar(1, size, themeData),
+      bottomNavigationBar: BottomAppBar(
+        notchMargin: 10.0,
+        shape: const CircularNotchedRectangle(),
+        color: Colors.grey.shade200,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          mainAxisSize: MainAxisSize.max,
+          children: [
+            InkWell(
+              onTap: () {
+
+              },
+              child: Padding(
+                padding: const EdgeInsets.only(left: 10.0, right: 10),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: const [
+                    Icon(
+                      CupertinoIcons.home,
+                      color: Colors.deepPurple,
+                    ),
+                    Text(
+                      "Home",
+                      style: TextStyle(color: Colors.blueAccent),
+                    )
+                  ],
+                ),
+              ),
+            ),
+            InkWell(
+              onTap: () {
+
+              },
+              child: Padding(
+                padding: const EdgeInsets.only(left: 10.0, right: 10),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: const [
+                    Icon(
+                      CupertinoIcons.location_solid,
+                      color: Colors.deepPurple,
+                    ),
+                    Text(
+                      "Location",
+                      style: TextStyle(color: Colors.blueAccent),
+                    )
+                  ],
+                ),
+              ),
+            ),
+            InkWell(
+              onTap: () {
+
+              },
+              child: Padding(
+                padding: const EdgeInsets.only(left: 10.0, right: 10),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: const [
+                    Icon(
+                      CupertinoIcons.profile_circled,
+                      color: Colors.deepPurple,
+                    ),
+                    Text(
+                      "Profile",
+                      style: TextStyle(color: Colors.blueAccent),
+                    )
+                  ],
+                ),
+              ),
+            ),
+            InkWell(
+              onTap: () {
+
+              },
+              child: Padding(
+                padding: const EdgeInsets.only(left: 10.0, right: 10),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: const [
+                    Icon(
+                      CupertinoIcons.settings_solid,
+                      color: Colors.purple,
+                    ),
+                    Text(
+                      "Setting",
+                      style: TextStyle(color: Colors.blueAccent),
+                    )
+                  ],
+                ),
+              ),
+            ),
+
+          ],
+        ),
+      ),
       backgroundColor: Colors.grey.shade200,
       body: SafeArea(
         child: ListView(
