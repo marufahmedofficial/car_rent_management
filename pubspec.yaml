@@ -41,22 +41,22 @@ dependencies:
   shared_preferences:
   flutter_rating_bar: ^4.0.1
   flutter_otp_text_field: ^1.1.1
-  flutter_email_sender: ^5.1.0
+  flutter_email_sender: ^6.0.0
   #background_sms: ^0.0.4
-  mailer: ^5.2.0
-  google_sign_in: ^5.4.2
+  mailer: ^6.0.1
+  google_sign_in: ^6.1.4
   flutter_launcher_icons: ^0.13.1
   flutter_native_splash: ^2.2.19
-  google_fonts: ^4.0.4
+  google_fonts: ^5.1.0
   get: ^4.6.1
   unicons: ^2.0.2
   slide_digital_clock: ^1.0.2
   nb_utils: ^5.0.5
-  share_plus: ^6.3.1
+  share_plus: ^7.0.2
   url_launcher: ^6.1.11
   settings_ui: ^2.0.2
   email_validator: ^2.0.1
-  string_validator: ^0.3.0
+  string_validator: ^1.0.0
   path_provider: ^2.0.4
   webview_flutter: ^4.2.0
   geolocator: ^9.0.2
